@@ -6,7 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "Grabber.generated.h"
-
+//#include "Engine/Classes/Components/InputComponent.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ESCAPEGAME1_API UGrabber : public UActorComponent
@@ -32,4 +32,8 @@ private:
 
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 
+	UInputComponent* InputComponent = nullptr;
+
+	// Ray-cast and grab what's in reach
+	void Grab();
 };
